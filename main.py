@@ -200,5 +200,102 @@ if __name__ == "__main__":
   But in this case, id(m) and id(n) are identical!
 
   For purposes of optimization, the interpreter creates objects for the integers in the range [-5, 256] at startup, and then reuses them during program execution.
-  This, when you assign separate variables to an integer value in this range, they will actually reference the same object.
+  Thus, when you assign separate variables to an integer value in this range, they will actually reference the same object.
+  """
+
+  # Variable Names
+
+  """
+  The examples you have seen so far have used short, terse variable names like m and n.
+  But variable names can be more verbose.
+  In fact, it is usually beneficial if they are because it makes the purpose of the variable more evident at first glance.
+
+  Officially, variable names in Python can be any length and can consist of uppercase and lowercase letters (A-Z, a-z), digits (0-9). and the underscore character (_).
+  An addtional restriction is that, although a variable name can contain digits, the first character of a variable name cannot be a digit.
+
+  For example, all of the following are valid variable names:
+  """
+
+  name = "Bob"
+  Age = 54
+  has_W2 = True
+  print(name, Age, has_W2)
+
+  """
+  But this one is not, because a variable naem can't begin with a digit:
+  """
+
+  # 1099_filed = False
+  # SyntaxError: invalid token
+
+  """
+  Note that case is significant.
+  Lowercase and uppercase letters are not the same.
+  use of the underscore character is significant as well.
+  Each of the following defines a different variable:
+  """
+
+  age = 1
+  Age = 2
+  aGe = 3
+  AGE = 4
+  a_g_e = 5
+  _age = 6
+  age_ = 7
+  _AGE_ = 8
+  print(age, Age, aGe, AGE, a_g_e, _age, age_, _AGE_)
+
+  """
+  There is nothing stopping you from creating two different variables in the same program called age and Age, or for that matter agE.
+  But it is probably ill-advised.
+  It would certainly be likely to confuse anyone trying to read your code,
+  and even yourself, after you'd been away from  it awhile.
+
+  It is worthwhile to give a variable a name that is descriptive enough to make clear what it is being used for.
+  For example, suppose you are tallying the number of people who have graduated college.
+  You could conceivably choose any of the following:
+  """
+
+  numberofcollegegraduates = 2500
+  NUMBEROFCOLLEGEGRADUATES = 2500
+  numberOfCollegeGraduates = 2500
+  NumberOfCollegeGraduates = 2500
+  number_of_college_graduates = 2500
+
+  print(numberofcollegegraduates,
+    NUMBEROFCOLLEGEGRADUATES,
+    numberOfCollegeGraduates,
+    NumberOfCollegeGraduates,
+    number_of_college_graduates)
+
+  """
+  All of them are probably better choices than n, or ncg, or the like.
+  At least you can tell from the name what the value of the variable is suppose to represent.
+
+  On the other hand, they aren't all necessarily equally legible.
+  As with many things, it is a matter of personal preference,
+  but most people would find the first two examples,
+  whether the letters are all shoved together, to be harder to read,
+  particularly the one in all capital leters.
+  The most commonly used methods of constructing a multi-word variable name are the last there examples:
+
+  - Camel Case: Second and subsequence words are capitalized, to make word boundaries easier to see.
+  (Presumably, it struck someone at some point that the capital letters strewn throughout the variable name vaguely resemble camel humps.)
+  - Pascal Case: identical to Camel Case, except the first world is also capitalized
+  - Snake Case: Words are seperated by underscores.
+
+  Programmers debate hotly, with surprising fevor, which of these is preferable.
+  Decent arguments can be made for all of them.
+  Use whichever of three is most visually appearing to you.
+  Pick one and use it consistently.
+
+  You will see later that variables aren't the only things that can be given names.
+  You can also name functions, classes, modules, and so on.
+  The rules that apply to variable names also apply to identifiers, the more general term for names given to program objects.
+
+  The Style Guide for Python Code, also known as PEP 8, contains Naming Conventions that list suggested standard for names of different obejct types.
+  PEP 8 includes the following recommendations:
+  - Smake Case should be used for functions and variable names.
+  - CamelCase should be used for class names.
+  (PEP 8 refers to this as the "CapWords" convention.)
   """
