@@ -43,3 +43,19 @@ if __name__ == "__main__":
   """
   The chained assignment above assigns 300 to the variables a, b and c simultaneously.
   """
+
+  # Variable Types in Python
+
+  """
+  In many programming languages, variables are statically typed.
+  That means a variable is initially declared to have a specific data type, and any value assigned to it during its lifetime must always have that type.
+
+  Variables in Python are not subject to this restriction.
+  In Python, avariable may be assigned a value of one type and then later re-assign a value of a different type:
+  """
+
+  var = 23.5
+  print(var)
+
+  var = "Now I'm a string"
+  print(var)
