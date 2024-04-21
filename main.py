@@ -145,3 +145,28 @@ if __name__ == "__main__":
   Python will eventually notice that it is inaccessible and reclaim the allocated memory so it can be used for something else.
   In computer lingo, this process is referred to as garbage collection.
   """
+
+  # Object Identity
+
+  """
+  In Python, every object that is created is given a number that uniquely identifies it.
+  It is guaranteed that no two objects will hjave the same identifier during any period in which their lifetime overlap.
+  Once an object's reference count drops to zero and it is garbage collected, as happened to the 300 object above, then its identifying number becomes available and may be used again.
+
+  The built-in Python function id() returns an object's integer identifier.
+  Using the id() function, you can verify that two variables indeed point to the same object:
+  """
+
+  n = 300
+  m = n
+  print(id(n))
+  print(id(m))
+
+  m = 400
+  print(id(n))
+  print(id(m))
+
+  """
+  After the assignment m = n, m and n both point to the same object, confirmed by the fact that id(m) and id(n) return the same number.
+  Once m is reassigned to 400, m and n point to different objects with different identities.
+  """
