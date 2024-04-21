@@ -299,3 +299,28 @@ if __name__ == "__main__":
   - CamelCase should be used for class names.
   (PEP 8 refers to this as the "CapWords" convention.)
   """
+
+  # Reserved Words (Keywords)
+
+  """
+  There is one more restriction on identifier names.
+  The Python language reserves a small sey of keywords that designate special language functionality.
+  No Object can have the same name as reserved word.
+
+  You can see this list anytime by typing help("keywords") to the Python interpreter.
+  Reserved words are case-sensitive and must be used exactly shown.
+  They are all entirely lowercase, except for False, None, and True.
+
+  Trying to create a variable with the same name as any reserved word results in an error
+  """
+
+  # for = 3
+  # SyntaxError:
+
+  # Conclusion
+
+  """
+  This tutorial covered the basics of Python variables, including object references and identity, and naming of Python identifiers.
+
+  You now have a good understanding of some of Python's data types and know how to create variables that reference object of those types.
+  """
